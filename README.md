@@ -39,9 +39,7 @@ Este portafolio digital documenta paso a paso la construcción de la red para el
 ### 📋 3. Tabla de Direccionamiento IP y Equipos
 *Completa los datos de la red asignada de acuerdo a las configuraciones de tus subinterfaces en el Router y las SVIs de los switches:*
 
-### 📋 3. Tablas de Direccionamiento IP y Equipos
-
-**Instrucciones para el estudiante:** Con base en las máscaras de subred y los segmentos asignados, calcula y completa las celdas vacías utilizando las reglas y las IPs aleatorias asignadas para cada host.
+**Instrucciones:** Con base en las máscaras de subred y los segmentos asignados, calcula y completa las celdas vacías utilizando las reglas y las IPs aleatorias asignadas para cada host.
 
 #### Tabla A: Dispositivos Intermedios (Routers y Switches)
 
