@@ -80,6 +80,43 @@ Este portafolio digital documenta paso a paso la construcción de la red para el
 ### 📸 4. Evidencias de Verificación (CLI con Firma de Identidad)
 > **Instrucciones obligatorias Anti-IA:** Pega aquí abajo las capturas de pantalla de tu CLI de Packet Tracer. Recuerda que el nombre del dispositivo debe incluir tus iniciales (ej. `SW-Core-EL`) y debes ejecutar el comando `show version` en la misma ventana de la consola para validar el tiempo de simulación activo.
 
+### 📋 Evidencia 1: Matriz de Direccionamiento Calculada
+
+**Instrucciones para el estudiante:** Con base en las explicaciones de clase, las máscaras y los prefijos CIDR asignados, calcula las direcciones IP y Gateways correspondientes. Modifica este archivo `README.md` y reemplaza los corchetes `[ ]` con tus resultados numéricos finales.
+
+#### Tabla A: Dispositivos Intermedios (Routers y Switches)
+
+| Dispositivo / Interfaz | VLAN | Segmento de Red Base | Dirección IP a Configurar | Máscara de Subred | Gateway por Defecto |
+| :--- | :---: | :--- | :--- | :--- | :--- |
+| **R1-Core** (`G0/0/0.10`) | 10 | `192.168.10.0/24` | `[ Calcular IP ]` | `[ Calcular Máscara ]` | *No aplica* |
+| **R1-Core** (`G0/0/0.20`) | 20 | `192.168.20.0/24` | `[ Calcular IP ]` | `[ Calcular Máscara ]` | *No aplica* |
+| **R1-Core** (`G0/0/0.30`) | 30 | `192.168.30.0/24` | `[ Calcular IP ]` | `[ Calcular Máscara ]` | *No aplica* |
+| **R1-Core** (`G0/0/0.99`) | 99 | `192.168.99.0/24` | `[ Calcular IP ]` | `[ Calcular Máscara ]` | *No aplica* |
+| **SW-Core** (SVI `VLAN 99`) | 99 | `192.168.99.0/24` | `[ Calcular IP ]` | `[ Calcular Máscara ]` | `[ Calcular GW ]` |
+| **SW-Lab1** (SVI `VLAN 99`) | 99 | `192.168.99.0/24` | `[ Calcular IP ]` | `[ Calcular Máscara ]` | `[ Calcular GW ]` |
+| **SW-Lab2** (SVI `VLAN 99`) | 99 | `192.168.99.0/24` | `[ Calcular IP ]` | `[ Calcular Máscara ]` | `[ Calcular GW ]` |
+
+#### Tabla B: Dispositivos Finales (PCs de Usuario y Gestión)
+
+| Dispositivo Final | Puerto del Switch | VLAN | Dirección IP (Formato CIDR) | Máscara de Subred en Decimal | Gateway por Defecto |
+| :--- | :--- | :---: | :--- | :--- | :--- |
+| **PC-Administrativos-1** | `SW-Core` -> `Fa0/1` | 10 | `192.168.10.15/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Administrativos-2** | `SW-Core` -> `Fa0/2` | 10 | `192.168.10.42/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Administrativos-3** | `SW-Core` -> `Fa0/3` | 10 | `192.168.10.77/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Administrativos-4** | `SW-Core` -> `Fa0/4` | 10 | `192.168.10.101/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Administrativos-5** | `SW-Core` -> `Fa0/5` | 10 | `192.168.10.130/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Administrativos-6** | `SW-Core` -> `Fa0/6` | 10 | `192.168.10.185/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Dirección-1**       | `SW-Core` -> `Fa0/7` | 30 | `192.168.30.22/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Dirección-2**       | `SW-Core` -> `Fa0/8` | 30 | `192.168.30.88/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Gestión** (Única)    | `SW-Core` -> `Fa0/9` | 99 | `192.168.99.50/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Alumnos-Lab1-A**    | `SW-Lab1` -> `Fa0/1` | 20 | `192.168.20.33/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Alumnos-Lab1-B**    | `SW-Lab1` -> `Fa0/2` | 20 | `192.168.20.65/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Alumnos-Lab1-C**    | `SW-Lab1` -> `Fa0/3` | 20 | `192.168.20.120/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Alumnos-Lab2-A**    | `SW-Lab2` -> `Fa0/1` | 20 | `192.168.20.142/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Alumnos-Lab2-B**    | `SW-Lab2` -> `Fa0/2` | 20 | `192.168.20.199/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+| **PC-Alumnos-Lab2-C**    | `SW-Lab2` -> `Fa0/3` | 20 | `192.168.20.210/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
+
+
 *   **Evidencia 1: Demostración de VLANs creadas en el SW-Core (`show vlan brief`)**
     ![Captura VLANs SW-Core](📌 ENLACE_A_TU_CAPTURA_VLAN)
 
