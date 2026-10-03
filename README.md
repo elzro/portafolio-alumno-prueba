@@ -117,13 +117,13 @@ Este portafolio digital documenta paso a paso la construcción de la red para el
 | **PC-Alumnos-Lab2-C**    | `SW-Lab2` -> `Fa0/3` | 20 | `192.168.20.210/24` | `[ Rellenar ]` | `[ Rellenar IP ]` |
 
 
-*   **Evidencia 1: Demostración de VLANs creadas en el SW-Core (`show vlan brief`)**
+*   **Evidencia 2: Demostración de VLANs creadas en el SW-Core (`show vlan brief`)**
     ![Captura VLANs SW-Core](📌 ENLACE_A_TU_CAPTURA_VLAN)
 
-*   **Evidencia 2: Tabla de enrutamiento en el Router Core (`show ip route`)**
+*   **Evidencia 3: Tabla de enrutamiento en el Router Core (`show ip route`)**
     ![Captura Enrutamiento Router](📌 ENLACE_A_TU_CAPTURA_ROUTE)
 
-*   **Evidencia 3: Prueba de conectividad exitosa (Ping entre una PC de Administrativos de la VLAN 10 y una PC de Alumnos de la VLAN 20)**
+*   **Evidencia 4: Prueba de conectividad exitosa (Ping entre una PC de Administrativos de la VLAN 10 y una PC de Alumnos de la VLAN 20)**
     ![Captura Ping Exitoso](📌 ENLACE_A_TU_CAPTURA_PING)
 
 ### 📝 5. Diario de Aprendizaje y Troubleshooting (Anti-IA)
