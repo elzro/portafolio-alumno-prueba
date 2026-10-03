@@ -135,5 +135,16 @@ Este portafolio digital documenta paso a paso la construcción de la red para el
        **Solución:** [Escribe cómo lo solucionaste usando comandos de diagnóstico de Cisco]
 
 ---
+
+<details>
+<summary>👁️ ¡Haz clic aquí para desplegar el Instrumento de Evaluación / Lista de Cotejo! </summary>
+
+### Aquí pegas toda la Lista de Cotejo que te di en el mensaje anterior...
+*(Tablas, criterios, puntajes, etc.)*
+
+</details>
+
+
+
 *(Las secciones para la Etapa 2 y Etapa 3 se añadirán en este mismo archivo conforme se avance en el semestre)*
 
