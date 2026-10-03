@@ -57,23 +57,24 @@ Este portafolio digital documenta paso a paso la construcción de la red para el
 
 #### Tabla B: Dispositivos Finales (PCs de Usuario y Gestión)
 
-| Dispositivo Final | VLAN | Segmento de Red Base | Dirección IP Asignada | Máscara de Subred | Gateway por Defecto |
-| :--- | :---: | :--- | :--- | :--- | :--- |
-| **PC-Administrativos-1** | 10 | `192.168.10.0/24` | `192.168.10.15` | `255.255.255.0` | |
-| **PC-Administrativos-2** | 10 | `192.168.10.0/24` | `192.168.10.42` | `255.255.255.0` | |
-| **PC-Administrativos-3** | 10 | `192.168.10.0/24` | `192.168.10.77` | `255.255.255.0` | |
-| **PC-Administrativos-4** | 10 | `192.168.10.0/24` | `192.168.10.101` | `255.255.255.0` | |
-| **PC-Administrativos-5** | 10 | `192.168.10.0/24` | `192.168.10.130` | `255.255.255.0` | |
-| **PC-Administrativos-6** | 10 | `192.168.10.0/24` | `192.168.10.185` | `255.255.255.0` | |
-| **PC-Dirección-1**       | 30 | `192.168.30.0/24` | `192.168.30.22` | `255.255.255.0` | |
-| **PC-Dirección-2**       | 30 | `192.168.30.0/24` | `192.168.30.88` | `255.255.255.0` | |
-| **PC-Gestión** (Única)    | 99 | `192.168.99.0/24` | `192.168.99.50` | `255.255.255.0` | |
-| **PC-Alumnos-Lab1-A**    | 20 | `192.168.20.0/24` | `192.168.20.33` | `255.255.255.0` | |
-| **PC-Alumnos-Lab1-B**    | 20 | `192.168.20.0/24` | `192.168.20.65` | `255.255.255.0` | |
-| **PC-Alumnos-Lab1-C**    | 20 | `192.168.20.0/24` | `192.168.20.120` | `255.255.255.0` | |
-| **PC-Alumnos-Lab2-A**    | 20 | `192.168.20.0/24` | `192.168.20.142` | `255.255.255.0` | |
-| **PC-Alumnos-Lab2-B**    | 20 | `192.168.20.0/24` | `192.168.20.199` | `255.255.255.0` | |
-| **PC-Alumnos-Lab2-C**    | 20 | `192.168.20.0/24` | `192.168.20.210` | `255.255.255.0` | |
+| Dispositivo Final | Puerto del Switch | VLAN | Dirección IP (Formato CIDR) | Gateway por Defecto |
+| :--- | :--- | :---: | :--- | :--- |
+| **PC-Administrativos-1** | `SW-Core` -> `Fa0/1` | 10 | `192.168.10.15/24` | Última IP utilizable del segmento |
+| **PC-Administrativos-2** | `SW-Core` -> `Fa0/2` | 10 | `192.168.10.42/24` | Última IP utilizable del segmento |
+| **PC-Administrativos-3** | `SW-Core` -> `Fa0/3` | 10 | `192.168.10.77/24` | Última IP utilizable del segmento |
+| **PC-Administrativos-4** | `SW-Core` -> `Fa0/4` | 10 | `192.168.10.101/24` | Última IP utilizable del segmento |
+| **PC-Administrativos-5** | `SW-Core` -> `Fa0/5` | 10 | `192.168.10.130/24` | Última IP utilizable del segmento |
+| **PC-Administrativos-6** | `SW-Core` -> `Fa0/6` | 10 | `192.168.10.185/24` | Última IP utilizable del segmento |
+| **PC-Dirección-1**       | `SW-Core` -> `Fa0/7` | 30 | `192.168.30.22/24` | Última IP utilizable del segmento |
+| **PC-Dirección-2**       | `SW-Core` -> `Fa0/8` | 30 | `192.168.30.88/24` | Última IP utilizable del segmento |
+| **PC-Gestión** (Única)    | `SW-Core` -> `Fa0/9` | 99 | `192.168.99.50/24` | Última IP utilizable del segmento |
+| **PC-Alumnos-Lab1-A**    | `SW-Lab1` -> `Fa0/1` | 20 | `192.168.20.33/24` | Última IP utilizable del segmento |
+| **PC-Alumnos-Lab1-B**    | `SW-Lab1` -> `Fa0/2` | 20 | `192.168.20.65/24` | Última IP utilizable del segmento |
+| **PC-Alumnos-Lab1-C**    | `SW-Lab1` -> `Fa0/3` | 20 | `192.168.20.120/24` | Última IP utilizable del segmento |
+| **PC-Alumnos-Lab2-A**    | `SW-Lab2` -> `Fa0/1` | 20 | `192.168.20.142/24` | Última IP utilizable del segmento |
+| **PC-Alumnos-Lab2-B**    | `SW-Lab2` -> `Fa0/2` | 20 | `192.168.20.199/24` | Última IP utilizable del segmento |
+| **PC-Alumnos-Lab2-C**    | `SW-Lab2` -> `Fa0/3` | 20 | `192.168.20.210/24` | Última IP utilizable del segmento |
+
 
 
 ### 📸 4. Evidencias de Verificación (CLI con Firma de Identidad)
