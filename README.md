@@ -39,15 +39,42 @@ Este portafolio digital documenta paso a paso la construcción de la red para el
 ### 📋 3. Tabla de Direccionamiento IP y Equipos
 *Completa los datos de la red asignada de acuerdo a las configuraciones de tus subinterfaces en el Router y las SVIs de los switches:*
 
-| Dispositivo / Interfaz | VLAN Asociada | Dirección IP | Máscara de Subred | Gateway por Defecto |
-| :--- | :---: | :--- | :--- | :--- |
-| **R1-Core** (`G0/0/0.10`) | 10 (Admin) | `192.168.10.254` | `255.255.255.0` | N/A |
-| **R1-Core** (`G0/0/0.20`) | 20 (Alumnos) | `192.168.20.254` | `255.255.255.0` | N/A |
-| **R1-Core** (`G0/0/0.30`) | 30 (Dirección) | `192.168.30.254` | `255.255.255.0` | N/A |
-| **R1-Core** (`G0/0/0.99`) | 99 (Gestión) | `192.168.99.254` | `255.255.255.0` | N/A |
-| **SW-Core** (`VLAN 99`) | 99 (Gestión) | `192.168.99.1` | `255.255.255.0` | `192.168.99.254` |
-| **SW-Lab1** (`VLAN 99`) | 99 (Gestión) | `192.168.99.2` | `255.255.255.0` | `192.168.99.254` |
-| **SW-Lab2** (`VLAN 99`) | 99 (Gestión) | `192.168.99.3` | `255.255.255.0` | `192.168.99.254` |
+### 📋 3. Tablas de Direccionamiento IP y Equipos
+
+**Instrucciones para el estudiante:** Con base en las máscaras de subred y los segmentos asignados, calcula y completa las celdas vacías utilizando las reglas y las IPs aleatorias asignadas para cada host.
+
+#### Tabla A: Dispositivos Intermedios (Routers y Switches)
+
+| Dispositivo / Interfaz | VLAN | Segmento de Red Base | Dirección IP a Calcular / Configurar | Máscara de Subred | Gateway por Defecto |
+| :--- | :---: | :--- | :--- | :--- | :--- |
+| **R1-Core** (`G0/0/0.10`) | 10 | `192.168.10.0/24` | **Última IP utilizable del segmento** | `255.255.255.0` | *No aplica* |
+| **R1-Core** (`G0/0/0.20`) | 20 | `192.168.20.0/24` | **Última IP utilizable del segmento** | `255.255.255.0` | *No aplica* |
+| **R1-Core** (`G0/0/0.30`) | 30 | `192.168.30.0/24` | **Última IP utilizable del segmento** | `255.255.255.0` | *No aplica* |
+| **R1-Core** (`G0/0/0.99`) | 99 | `192.168.99.0/24` | **Última IP utilizable del segmento** | `255.255.255.0` | *No aplica* |
+| **SW-Core** (SVI `VLAN 99`) | 99 | `192.168.99.0/24` | **1ª IP utilizable del segmento** | `255.255.255.0` | **Última IP utilizable** |
+| **SW-Lab1** (SVI `VLAN 99`) | 99 | `192.168.99.0/24` | **2ª IP utilizable del segmento** | `255.255.255.0` | **Última IP utilizable** |
+| **SW-Lab2** (SVI `VLAN 99`) | 99 | `192.168.99.0/24` | **3ª IP utilizable del segmento** | `255.255.255.0` | **Última IP utilizable** |
+
+#### Tabla B: Dispositivos Finales (PCs de Usuario y Gestión)
+
+| Dispositivo Final | VLAN | Segmento de Red Base | Dirección IP Asignada | Máscara de Subred | Gateway por Defecto |
+| :--- | :---: | :--- | :--- | :--- | :--- |
+| **PC-Administrativos-1** | 10 | `192.168.10.0/24` | `192.168.10.15` | `255.255.255.0` | |
+| **PC-Administrativos-2** | 10 | `192.168.10.0/24` | `192.168.10.42` | `255.255.255.0` | |
+| **PC-Administrativos-3** | 10 | `192.168.10.0/24` | `192.168.10.77` | `255.255.255.0` | |
+| **PC-Administrativos-4** | 10 | `192.168.10.0/24` | `192.168.10.101` | `255.255.255.0` | |
+| **PC-Administrativos-5** | 10 | `192.168.10.0/24` | `192.168.10.130` | `255.255.255.0` | |
+| **PC-Administrativos-6** | 10 | `192.168.10.0/24` | `192.168.10.185` | `255.255.255.0` | |
+| **PC-Dirección-1**       | 30 | `192.168.30.0/24` | `192.168.30.22` | `255.255.255.0` | |
+| **PC-Dirección-2**       | 30 | `192.168.30.0/24` | `192.168.30.88` | `255.255.255.0` | |
+| **PC-Gestión** (Única)    | 99 | `192.168.99.0/24` | `192.168.99.50` | `255.255.255.0` | |
+| **PC-Alumnos-Lab1-A**    | 20 | `192.168.20.0/24` | `192.168.20.33` | `255.255.255.0` | |
+| **PC-Alumnos-Lab1-B**    | 20 | `192.168.20.0/24` | `192.168.20.65` | `255.255.255.0` | |
+| **PC-Alumnos-Lab1-C**    | 20 | `192.168.20.0/24` | `192.168.20.120` | `255.255.255.0` | |
+| **PC-Alumnos-Lab2-A**    | 20 | `192.168.20.0/24` | `192.168.20.142` | `255.255.255.0` | |
+| **PC-Alumnos-Lab2-B**    | 20 | `192.168.20.0/24` | `192.168.20.199` | `255.255.255.0` | |
+| **PC-Alumnos-Lab2-C**    | 20 | `192.168.20.0/24` | `192.168.20.210` | `255.255.255.0` | |
+
 
 ### 📸 4. Evidencias de Verificación (CLI con Firma de Identidad)
 > **Instrucciones obligatorias Anti-IA:** Pega aquí abajo las capturas de pantalla de tu CLI de Packet Tracer. Recuerda que el nombre del dispositivo debe incluir tus iniciales (ej. `SW-Core-EL`) y debes ejecutar el comando `show version` en la misma ventana de la consola para validar el tiempo de simulación activo.
