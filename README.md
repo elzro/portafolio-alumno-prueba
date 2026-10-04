@@ -14,6 +14,8 @@ Este portafolio digital documenta paso a paso la construcción de la red para el
 ## 📍 Etapa 1: Infraestructura Base y Segmentación (Módulos 1-4)
 
 
+
+```mermaid
 graph TD
     R1[R1-Core Router<br/>Subinterfaces: .10, .20, .30, .99] ---|Trunk G0/0/0| SWC[SW-Core Switch]
     
@@ -26,6 +28,7 @@ graph TD
     
     SWL1 ---|Access| PCL1[3 PCs Lab 1<br/>VLAN 20]
     SWL2 ---|Access| PCL2[3 PCs Lab 2<br/>VLAN 20]
+```
 
 ### 🗺️ 1. Topología Física Oficial de la Red
 *Conecta los dispositivos en Cisco Packet Tracer siguiendo estrictamente este esquema de estrella extendida:*
