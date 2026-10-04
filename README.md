@@ -18,17 +18,17 @@ Este portafolio digital documenta paso a paso la construcción de la red para el
 ```mermaid
 graph TD
     %% Definición de la Topología
-    R1(R1-Core Router<br/>Subinterfaces: .10, .20, .30, .99) ---|Trunk G0/0/0| SWC[SW-Core Switch]
+    R1(R1-Core Router<br/>Subinterfaces: .10, .20, .30, .99) ---|Trunk G0/0/0| SWC[SW-Core 🔀 Switch]
     
-    SWC ---|Access| PCG[PC Gestión<br/>VLAN 99 - .10]
-    SWC ---|Access| PCA[6 PCs Admin<br/>VLAN 10]
-    SWC ---|Access| PCD[2 PCs Dirección<br/>VLAN 30]
+    SWC ---|Access| PCG[PC 💻 Gestión<br/>VLAN 99 - .10]
+    SWC ---|Access| PCA[6 💻 PCs Admin<br/>VLAN 10]
+    SWC ---|Access| PCD[2 💻 PCs Dirección<br/>VLAN 30]
     
-    SWC ---|Trunk| SWL1[SW-Lab1 Switch<br/>SVI 99: .2]
-    SWC ---|Trunk| SWL2[SW-Lab2 Switch<br/>SVI 99: .3]
+    SWC ---|Trunk| SWL1[SW-Lab1 🔀 Switch<br/>SVI 99: .2]
+    SWC ---|Trunk| SWL2[SW-Lab2 🔀 Switch<br/>SVI 99: .3]
     
-    SWL1 ---|Access| PCL1[3 PCs Lab 1<br/>VLAN 20]
-    SWL2 ---|Access| PCL2[3 PCs Lab 2<br/>VLAN 20]
+    SWL1 ---|Access| PCL1[3 💻 PCs Lab 1<br/>VLAN 20]
+    SWL2 ---|Access| PCL2[3 💻PCs Lab 2<br/>VLAN 20]
 
     %% Estilos de Nodos Generales (Routers y Switches)
     style R1 fill:#1f2937,stroke:#9ca3af,stroke-width:2px,color:#fff
