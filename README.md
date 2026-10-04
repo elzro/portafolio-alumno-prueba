@@ -50,7 +50,7 @@ graph TD
     %% VLAN 30 - Dirección (Morado)
     style PCD fill:#e9d5ff,stroke:#9333ea,stroke-width:2px,color:#581c87
 ```
-
+<!--
 ```mermaid
 graph TD
     %% Routers y Switches
@@ -124,7 +124,7 @@ graph TD
     R1 === SWC
     SWC --- PC
 ```
-
+-->
 ### 🗺️ 1. Topología Física Oficial de la Red
 *Conecta los dispositivos en Cisco Packet Tracer siguiendo estrictamente este esquema de estrella extendida:*
 
