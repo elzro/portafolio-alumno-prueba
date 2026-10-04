@@ -115,6 +115,16 @@ graph TD
     class PCL1_1,PCL1_2,PCL1_3,PCL2_1,PCL2_2,PCL2_3 vlan20;
 ```
 
+```mermaid
+graph TD
+    R1["<img src='[https://img.icons8.com/color/48/router.png](https://img.icons8.com/color/48/router.png)' width='30'/><br/><b>R1-Core</b>"]
+    SWC["<img src='[https://img.icons8.com/color/48/switch.png](https://img.icons8.com/color/48/switch.png)' width='30'/><br/><b>SW-Core</b>"]
+    PC["<img src='[https://img.icons8.com/color/48/monitor.png](https://img.icons8.com/color/48/monitor.png)' width='30'/><br/><b>PC Gestión</b>"]
+
+    R1 === SWC
+    SWC --- PC
+```
+
 ### 🗺️ 1. Topología Física Oficial de la Red
 *Conecta los dispositivos en Cisco Packet Tracer siguiendo estrictamente este esquema de estrella extendida:*
 
