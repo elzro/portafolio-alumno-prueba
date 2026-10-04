@@ -51,6 +51,72 @@ graph TD
     style PCD fill:#e9d5ff,stroke:#9333ea,stroke-width:2px,color:#581c87
 ```
 
+```mermaid
+graph TD
+    %% Define el uso de FontAwesome para íconos
+    %% Routers y Switches
+    R1["fa:fa-server R1-Core<br/>(Router)"]
+    SWC["fa:fa-network-wired SWC<br/>(Switch Core)"]
+    SWL1["fa:fa-network-wired SWLab1<br/>(Switch Lab 1)"]
+    SWL2["fa:fa-network-wired SWLab2<br/>(Switch Lab 2)"]
+
+    %% VLAN 99: Gestión
+    PCG["fa:fa-desktop PC Gestión<br/>VLAN 99"]
+
+    %% VLAN 10: Administrativos
+    PCA1["fa:fa-desktop PC Admin 1"]
+    PCA2["fa:fa-desktop PC Admin 2"]
+    PCA3["fa:fa-desktop PC Admin 3"]
+    PCA4["fa:fa-desktop PC Admin 4"]
+    PCA5["fa:fa-desktop PC Admin 5"]
+    PCA6["fa:fa-desktop PC Admin 6"]
+
+    %% VLAN 30: Dirección
+    PCD1["fa:fa-desktop PC Dir 1"]
+    PCD2["fa:fa-desktop PC Dir 2"]
+
+    %% VLAN 20: Laboratorios
+    PCL1_1["fa:fa-desktop PC Lab1-1"]
+    PCL1_2["fa:fa-desktop PC Lab1-2"]
+    PCL1_3["fa:fa-desktop PC Lab1-3"]
+
+    PCL2_1["fa:fa-desktop PC Lab2-1"]
+    PCL2_2["fa:fa-desktop PC Lab2-2"]
+    PCL2_3["fa:fa-desktop PC Lab2-3"]
+
+    %% --- CONEXIONES ---
+    %% Enlaces Troncales (Trunk)
+    R1 ===|Trunk| SWC
+    SWC ===|Trunk| SWL1
+    SWC ===|Trunk| SWL2
+
+    %% Enlaces de Acceso desde SWC
+    SWC ---|VLAN 99| PCG
+    SWC ---|VLAN 10| PCA1 & PCA2 & PCA3 & PCA4 & PCA5 & PCA6
+    SWC ---|VLAN 30| PCD1 & PCD2
+
+    %% Enlaces de Acceso desde SWLab1 y SWLab2
+    SWL1 ---|VLAN 20| PCL1_1 & PCL1_2 & PCL1_3
+    SWL2 ---|VLAN 20| PCL2_1 & PCL2_2 & PCL2_3
+
+    %% --- ESTILOS DE ENLACES TRONCALES ---
+    linkStyle 0,1,2 stroke:#e11d48,stroke-width:3px;
+
+    %% --- DEFINICIÓN DE CLASES Y COLORES ---
+    classDef infra fill:#1e293b,stroke:#64748b,stroke-width:2px,color:#fff;
+    classDef vlan99 fill:#fef08a,stroke:#ca8a04,stroke-width:2px,color:#854d0e;
+    classDef vlan10 fill:#bbf7d0,stroke:#16a34a,stroke-width:2px,color:#14532d;
+    classDef vlan30 fill:#e9d5ff,stroke:#9333ea,stroke-width:2px,color:#581c87;
+    classDef vlan20 fill:#bfdbfe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a;
+
+    %% --- ASIGNACIÓN DE CLASES ---
+    class R1,SWC,SWL1,SWL2 infra;
+    class PCG vlan99;
+    class PCA1,PCA2,PCA3,PCA4,PCA5,PCA6 vlan10;
+    class PCD1,PCD2 vlan30;
+    class PCL1_1,PCL1_2,PCL1_3,PCL2_1,PCL2_2,PCL2_3 vlan20;
+```
+
 ### 🗺️ 1. Topología Física Oficial de la Red
 *Conecta los dispositivos en Cisco Packet Tracer siguiendo estrictamente este esquema de estrella extendida:*
 
